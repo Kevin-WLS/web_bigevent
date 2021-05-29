@@ -30,9 +30,9 @@
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
@@ -68,9 +68,12 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 重置密码</a></dd>
+                            <dd><a href="/user/user_info.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    基本资料</a></dd>
+                            <dd><a href="/user/user_avatar.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    更换头像</a></dd>
+                            <dd><a href="/user/user_pwd.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    重置密码</a></dd>
                         </dl>
                     </li>
 
@@ -96,6 +99,29 @@
     <script src="/assets/js/baseAPI.js"></script>
     <!-- 导入自己的 js 文件 -->
     <script src="/assets/js/index.js"></script>
+
+    <!-- 测试从 iframe 子页面中调用父页面中的方法 -->
+    <script>
+        function test() {
+            console.log(55555);
+        }
+    </script>
+
+
+    <script>
+        // 1、只要是采用ajax发起请求，不管请求是否成功，都会调用 complete 这个回调函数；
+        // 2、对于访问有权限的接口，一般需要提供token字符串，根据接口文档查如何获取以及如何使用；
+        // 3、iframe 标签的使用，用于在HTML页面中再创建一个HTML页面；
+        // 4、表单文件上传可以通过 accept 属性来指定选择什么样的文件上传,例如：image/png 表示png格式的图片
+        // 2、layui使用
+            // 1、form.val() layui官方提供的快速给表单赋值和快速获取表单内容的方法；
+            // 2、layui 官方提供字体图标；
+            // 3、layui 官方提供的表单及表单验证（可按照layui语法自定义验证规则）；
+
+        // 3、知识回顾
+            // 1、本地存储 localStorage.setItem();
+            // 2、跳转指定地址 location.href='';
+    </script>
 </body>
 
 </html>
