@@ -13,8 +13,8 @@ $.ajaxPrefilter(function (options) {
 
     // 统一挂载 complete 这个回调函数，禁止访问有权限的接口
     options.complete = function (res) {
-        console.log(res);
-        console.log(res.responseJSON);
+        // console.log(res);
+        // console.log(res.responseJSON);
         // 因为未登录，没有 Authorization 的 token 值，因此未登录访问接口时，没有提供 Authorization 值，虽然接口有响应（调用了complete函数），但对于有权限的接口会访问失败
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             // 1、清空本地存储中的 token
